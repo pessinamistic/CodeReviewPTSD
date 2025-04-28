@@ -1,3 +1,5 @@
+package splitwise.src;
+
 import model.Split;
 import model.User;
 import repository.UserRepository;
@@ -11,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class SplitWise {
 
   public static void main(String[] args) {
 //    EXPENSE u1 1000 4 u1 u2 u3 u4 EQUAL
