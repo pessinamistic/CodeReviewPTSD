@@ -59,6 +59,5 @@ public class SnakeAndLadder {
     visualizer.show();
     System.out.println("We'll playing with " + numberOfDice + " Dice !!");
     gameplayService.startGame(numberOfDice, cells, players);
-
   }
 }

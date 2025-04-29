@@ -15,15 +15,25 @@ public class GameplayService {
     diceService = new DiceService(diceCount);
     CircularNode currentPlayer = diceService.initialiseTurns(players);
     System.out.println("Starting the Game with First Player to roll the Dice " + currentPlayer.getPlayer().getName());
-    while (true){
+    boolean isGameOver = false;
+    while (!isGameOver){
       Player player = currentPlayer.getPlayer();
       String playerName = player.getName();
 
       int currentPosition = player.getPosition().getCellNumber();
+
       int diceValue = diceService.rollDice();
-      int nextPosition = currentPosition + diceValue;
-      if (nextPosition > 100){
-        printGamePlayMessage(playerName, diceValue, currentPosition, currentPosition);
+      int checkForSix = 0;
+      int totalRoll = diceValue;
+      while (diceValue == 6 && diceCount == 1 && checkForSix < 2){
+        diceValue = diceService.rollDice();
+        totalRoll += diceValue;
+        checkForSix++;
+      }
+      int nextPosition = currentPosition + totalRoll;
+      if (nextPosition > 100 || checkForSix == 2){
+        if (checkForSix == 2) System.out.println(playerName + " rolled 6, 3 times in a row!!!");
+        printGamePlayMessage(playerName, totalRoll, currentPosition, currentPosition);
         currentPlayer = diceService.getNextPlayer(currentPlayer);
         turns++;
         continue;
@@ -31,11 +41,11 @@ public class GameplayService {
 
       nextPosition = checkForSnL(nextPosition, cells.get(nextPosition));
       player.setPosition(cells.get(nextPosition));
-      printGamePlayMessage(playerName, diceValue, currentPosition, nextPosition);
+      printGamePlayMessage(playerName, totalRoll, currentPosition, nextPosition);
 
       if (nextPosition == 100){
         System.out.println(playerName + " wins the game in " + (int) Math.ceil(turns / players.size())  +" turns!!");
-        break;
+        isGameOver = true;
       }
 
       currentPlayer = diceService.getNextPlayer(currentPlayer);
