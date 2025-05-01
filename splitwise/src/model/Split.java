@@ -1,5 +1,8 @@
 package model;
 
 public enum Split {
-  EQUAL,EXACT,PERCENT,SHARE;
+  EQUAL,
+  EXACT,
+  PERCENT,
+  SHARE;
 }

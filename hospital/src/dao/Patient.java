@@ -1,4 +1,4 @@
-package dao;
+package hospital.src.dao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,8 +7,7 @@ public class Patient extends User {
   private int age;
   List<Appointment> bookedSlots;
 
-  public Patient() {
-  }
+  public Patient() {}
 
   public Patient(String name, int age) {
     super(name);
@@ -38,18 +37,14 @@ public class Patient extends User {
 
   @Override
   public String toString() {
-    return "Patient{" +
-            "name='" + getName() + '\'' +
-            "age=" + age +
-            "} ";
+    return "Patient{" + "name='" + getName() + '\'' + "age=" + age + "} ";
   }
 
   public static class PatientBuilder {
     private String name;
     private int age;
 
-    public PatientBuilder() {
-    }
+    public PatientBuilder() {}
 
     public PatientBuilder name(String name) {
       this.name = name;

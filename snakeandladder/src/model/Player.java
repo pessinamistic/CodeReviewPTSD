@@ -4,8 +4,7 @@ public class Player {
   String name;
   Cell position;
 
-  public Player() {
-  }
+  public Player() {}
 
   public Player(String name, Cell position) {
     this.name = name;
@@ -32,9 +31,6 @@ public class Player {
 
   @Override
   public String toString() {
-    return "Player{" +
-            "name='" + name + '\'' +
-            ", position=" + position +
-            '}';
+    return "Player{" + "name='" + name + '\'' + ", position=" + position + '}';
   }
 }

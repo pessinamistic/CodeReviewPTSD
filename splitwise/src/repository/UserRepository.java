@@ -1,9 +1,8 @@
 package repository;
 
-import model.User;
-
 import java.util.HashMap;
 import java.util.Map;
+import model.User;
 
 public class UserRepository {
   static final Map<String, User> USER_MAP = new HashMap<>();
@@ -15,6 +14,7 @@ public class UserRepository {
     System.out.println("User not found");
     return null;
   }
+
   public static void addUser(String name, User user) {
     USER_MAP.put(name, user);
     System.out.println(name + " registered successfully!");

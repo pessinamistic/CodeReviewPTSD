@@ -1,5 +1,8 @@
 package splitwise.src;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 import model.Split;
 import model.User;
 import repository.UserRepository;
@@ -8,10 +11,6 @@ import validations.EqualsValidator;
 import validations.ExactValidator;
 import validations.PercentValidator;
 import validations.ShareValidator;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 public class SplitWise {
 

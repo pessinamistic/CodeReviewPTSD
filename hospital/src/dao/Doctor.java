@@ -1,6 +1,6 @@
-package dao;
+package hospital.src.dao;
 
-import enums.Speciality;
+import hospital.src.enums.Speciality;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -47,11 +47,13 @@ public class Doctor extends User {
   }
 
   private void sortArray(List<Slot> availableSlots) {
-    Arrays.sort(availableSlots.toArray(), (a, b) -> {
-      Slot slot1 = (Slot) a;
-      Slot slot2 = (Slot) b;
-      return slot1.getStartTime().compareTo(slot2.getStartTime());
-    });
+    Arrays.sort(
+        availableSlots.toArray(),
+        (a, b) -> {
+          Slot slot1 = (Slot) a;
+          Slot slot2 = (Slot) b;
+          return slot1.getStartTime().compareTo(slot2.getStartTime());
+        });
   }
 
   public List<Slot> getBookedSlots() {
@@ -80,25 +82,33 @@ public class Doctor extends User {
 
   @Override
   public String toString() {
-    return "Doctor{" +
-            "doctorId=" + doctorId +
-            ", name=" + getName() +
-            ", speciality=" + speciality.getName() +
-            ", availableSlots=" + availableSlots +
-            ", bookedSlots=" + bookedSlots +
-            ", waitList=" + waitList +
-            ", email=" + getEmail() +
-            ", phoneNumber=" + getPhoneNumber() +
-            ", address=" + getAddress() +
-            '}';
+    return "Doctor{"
+        + "doctorId="
+        + doctorId
+        + ", name="
+        + getName()
+        + ", speciality="
+        + speciality.getName()
+        + ", availableSlots="
+        + availableSlots
+        + ", bookedSlots="
+        + bookedSlots
+        + ", waitList="
+        + waitList
+        + ", email="
+        + getEmail()
+        + ", phoneNumber="
+        + getPhoneNumber()
+        + ", address="
+        + getAddress()
+        + '}';
   }
 
   public static class DoctorBuilder {
     private String name;
     private Speciality speciality;
 
-    public DoctorBuilder() {
-    }
+    public DoctorBuilder() {}
 
     public DoctorBuilder name(String name) {
       this.name = name;
@@ -116,11 +126,7 @@ public class Doctor extends User {
 
     @Override
     public String toString() {
-      return "DoctorBuilder{" +
-              "name='" + name + '\'' +
-              ", speciality='" + speciality + '\'' +
-              '}';
+      return "DoctorBuilder{" + "name='" + name + '\'' + ", speciality='" + speciality + '\'' + '}';
     }
   }
-
 }

@@ -1,10 +1,9 @@
-package service;
+package hospital.src.service;
 
-import dao.Appointment;
-import dao.Doctor;
-import dao.Slot;
-import enums.Speciality;
-
+import hospital.src.dao.Appointment;
+import hospital.src.dao.Doctor;
+import hospital.src.dao.Slot;
+import hospital.src.enums.Speciality;
 import java.time.Duration;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -18,13 +17,14 @@ public class DoctorService {
   static final Map<String, Doctor> DOCTORS_MAP = new HashMap<>();
 
   public static Doctor getDoctor(String name) {
-    return DOCTORS_MAP.get(name.replace("Dr.",""));
+    return DOCTORS_MAP.get(name.replace("Dr.", ""));
   }
 
   public void addDoctor(String[] input) {
     String name = input[2];
     String speciality = input[4];
-    Doctor doctor = Doctor.builder()
+    Doctor doctor =
+        Doctor.builder()
             .name(name)
             .speciality(Speciality.valueOf(speciality.toUpperCase()))
             .build();
@@ -68,7 +68,10 @@ public class DoctorService {
       LocalTime start = LocalTime.of(startTimeHour, startTimeMinute);
 
       int endTimeHour = Integer.parseInt(split[1].split(":")[0]);
-      String s = split[1].split(":")[1].contains(",") ? split[1].split(":")[1].split(",")[0] : split[1].split(":")[1];
+      String s =
+          split[1].split(":")[1].contains(",")
+              ? split[1].split(":")[1].split(",")[0]
+              : split[1].split(":")[1];
       int endTimeMinute = Integer.parseInt(s);
       LocalTime end = LocalTime.of(endTimeHour, endTimeMinute);
       slots.add(Slot.builder().startTime(start).endTime(end).isAvailable(true).build());
@@ -97,8 +100,8 @@ public class DoctorService {
 
   public void showAvailableDoctors(String[] userInput) {
     Speciality speciality = Speciality.valueOf(userInput[1].toUpperCase());
-    Set<Doctor> availableDoctors = DOCTORS_MAP.values()
-            .stream()
+    Set<Doctor> availableDoctors =
+        DOCTORS_MAP.values().stream()
             .filter(doctor -> doctor.getSpeciality().equals(speciality))
             .collect(Collectors.toSet());
     if (availableDoctors.isEmpty()) {
@@ -108,7 +111,14 @@ public class DoctorService {
       List<Slot> slots = doctor.getAvailableSlots();
       for (Slot slot : slots) {
         if (slot.isAvailable()) {
-          System.out.println("Dr." + doctor.getName() + " (" + slot.getStartTime() + "-" + slot.getEndTime() + ")");
+          System.out.println(
+              "Dr."
+                  + doctor.getName()
+                  + " ("
+                  + slot.getStartTime()
+                  + "-"
+                  + slot.getEndTime()
+                  + ")");
         }
       }
     }
@@ -123,8 +133,14 @@ public class DoctorService {
       return;
     }
     List<Appointment> waitList = doctor.getWaitList();
-    for (Appointment appointment : waitList){
-      System.out.println("WaitList Booking id: " + appointment.getBookingId() + ", patient " + appointment.getPatient().getName() + " " + appointment.getSlot().getStartTime());
+    for (Appointment appointment : waitList) {
+      System.out.println(
+          "WaitList Booking id: "
+              + appointment.getBookingId()
+              + ", patient "
+              + appointment.getPatient().getName()
+              + " "
+              + appointment.getSlot().getStartTime());
     }
   }
 }

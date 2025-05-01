@@ -7,7 +7,7 @@ Snake and Ladder
 ========================================================
 Sample Input
 
-2 Players 1 Dice 
+2 Players 1 Dice
 
 9
 62 5

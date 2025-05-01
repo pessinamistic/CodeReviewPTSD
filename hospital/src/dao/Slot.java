@@ -1,4 +1,4 @@
-package dao;
+package hospital.src.dao;
 
 import java.time.LocalTime;
 import java.util.ArrayDeque;
@@ -10,8 +10,7 @@ public class Slot {
   private boolean isAvailable = true;
   Queue<Appointment> waitingQueue = new ArrayDeque<>();
 
-  public Slot() {
-  }
+  public Slot() {}
 
   public Slot(LocalTime startTime, LocalTime endTime, boolean isAvailable) {
     this.startTime = startTime;
@@ -73,9 +72,14 @@ public class Slot {
 
     @Override
     public String toString() {
-      return "SlotBuilder{" + "startTime=" + startTime + ", endTime=" + endTime + ", isAvailable=" + isAvailable + '}';
+      return "SlotBuilder{"
+          + "startTime="
+          + startTime
+          + ", endTime="
+          + endTime
+          + ", isAvailable="
+          + isAvailable
+          + '}';
     }
   }
 }
-
-

@@ -1,5 +1,3 @@
-package dao;
+package hospital.src.dao;
 
-public class TimeTable {
-
-}
+public class TimeTable {}
