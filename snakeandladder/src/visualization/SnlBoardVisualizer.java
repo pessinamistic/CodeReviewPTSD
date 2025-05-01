@@ -1,11 +1,11 @@
 package snakeandladder.src.visualization;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.List;
+import javax.swing.*;
 import snakeandladder.src.model.Cell;
 import snakeandladder.src.model.Player;
 

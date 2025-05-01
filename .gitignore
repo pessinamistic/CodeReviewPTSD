@@ -3,6 +3,7 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+CodeReviewPTSD.iml
 
 ### Eclipse ###
 .apt_generated

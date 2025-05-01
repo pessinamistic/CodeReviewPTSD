@@ -7,8 +7,7 @@ public class Cell {
   boolean isSnake;
   boolean isLadder;
 
-  public Cell() {
-  }
+  public Cell() {}
 
   public Cell(int moveTo, int cellNumber, boolean isSnake, boolean isLadder) {
     this.moveTo = moveTo;
@@ -53,11 +52,15 @@ public class Cell {
 
   @Override
   public String toString() {
-    return "Cell{" +
-            "moveTo=" + moveTo +
-            ", cellNumber=" + cellNumber +
-            ", isSnake=" + isSnake +
-            ", isLadder=" + isLadder +
-            '}';
+    return "Cell{"
+        + "moveTo="
+        + moveTo
+        + ", cellNumber="
+        + cellNumber
+        + ", isSnake="
+        + isSnake
+        + ", isLadder="
+        + isLadder
+        + '}';
   }
 }

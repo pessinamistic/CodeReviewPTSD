@@ -1,11 +1,10 @@
 package snakeandladder.src.service;
 
-import snakeandladder.src.model.CircularNode;
-import snakeandladder.src.model.Player;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import snakeandladder.src.model.CircularNode;
+import snakeandladder.src.model.Player;
 
 public class DiceService {
   int size = 0;
@@ -21,9 +20,9 @@ public class DiceService {
   public CircularNode initialiseTurns(List<Player> players) {
     this.size = players.size();
     CircularNode circularNode = null;
-    for (Player player : players){
+    for (Player player : players) {
       CircularNode playerNode = new CircularNode(player);
-      if (circularNode == null){
+      if (circularNode == null) {
         circularNode = playerNode;
         circularNode.setNext(circularNode);
         head = circularNode;
@@ -55,8 +54,7 @@ public class DiceService {
     return diceResults.stream().mapToInt(Integer::intValue).sum();
   }
 
-  public CircularNode getNextPlayer(CircularNode currentPlayer){
+  public CircularNode getNextPlayer(CircularNode currentPlayer) {
     return currentPlayer.getNext();
   }
 }
-

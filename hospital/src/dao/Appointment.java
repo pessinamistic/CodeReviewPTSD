@@ -1,4 +1,4 @@
-package dao;
+package hospital.src.dao;
 
 import java.util.UUID;
 
@@ -8,8 +8,7 @@ public class Appointment {
   Doctor doctor;
   Patient patient;
 
-  public Appointment() {
-  }
+  public Appointment() {}
 
   public Appointment(Slot slot, Doctor doctor, Patient patient) {
     this.slot = slot;
@@ -52,10 +51,6 @@ public class Appointment {
 
   @Override
   public String toString() {
-    return "Appointment{" +
-            "slot=" + slot +
-            ", doctor=" + doctor +
-            ", patient=" + patient +
-            '}';
+    return "Appointment{" + "slot=" + slot + ", doctor=" + doctor + ", patient=" + patient + '}';
   }
 }

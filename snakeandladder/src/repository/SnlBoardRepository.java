@@ -1,9 +1,8 @@
 package snakeandladder.src.repository;
 
-import snakeandladder.src.model.Cell;
-
 import java.util.List;
 import java.util.stream.IntStream;
+import snakeandladder.src.model.Cell;
 
 public class SnlBoardRepository {
 

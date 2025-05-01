@@ -1,4 +1,4 @@
-package dao;
+package hospital.src.dao;
 
 public class User {
   private String name;
@@ -6,8 +6,7 @@ public class User {
   private String phoneNumber;
   private String address;
 
-  public User() {
-  }
+  public User() {}
 
   public User(String name) {
     this.name = name;
@@ -54,11 +53,19 @@ public class User {
 
   @Override
   public String toString() {
-    return "User{" +
-            "name='" + name + '\'' +
-            ", email='" + email + '\'' +
-            ", phoneNumber='" + phoneNumber + '\'' +
-            ", address='" + address + '\'' +
-            '}';
+    return "User{"
+        + "name='"
+        + name
+        + '\''
+        + ", email='"
+        + email
+        + '\''
+        + ", phoneNumber='"
+        + phoneNumber
+        + '\''
+        + ", address='"
+        + address
+        + '\''
+        + '}';
   }
 }

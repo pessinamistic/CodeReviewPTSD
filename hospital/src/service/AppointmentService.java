@@ -1,11 +1,10 @@
-package service;
+package hospital.src.service;
 
-import dao.Appointment;
-import dao.Doctor;
-import dao.Patient;
-import dao.Slot;
-import dao.SlotCheck;
-
+import hospital.src.dao.Appointment;
+import hospital.src.dao.Doctor;
+import hospital.src.dao.Patient;
+import hospital.src.dao.Slot;
+import hospital.src.dao.SlotCheck;
 import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.List;

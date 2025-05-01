@@ -1,4 +1,4 @@
-package enums;
+package hospital.src.enums;
 
 public enum Speciality {
   CARDIOLOGIST("Cardiologist"),

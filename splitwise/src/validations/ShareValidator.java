@@ -2,9 +2,14 @@ package validations;
 
 import java.util.List;
 
-public class ShareValidator implements ExpenseValidator{
+public class ShareValidator implements ExpenseValidator {
   @Override
-  public boolean validate(String payee, List<String> participants, double amount, int numberOfParticipants, List<Double> values) {
+  public boolean validate(
+      String payee,
+      List<String> participants,
+      double amount,
+      int numberOfParticipants,
+      List<Double> values) {
     if (!defaultValidations(payee, participants, amount, numberOfParticipants)) {
       return false;
     }

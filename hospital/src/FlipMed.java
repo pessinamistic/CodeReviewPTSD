@@ -1,11 +1,10 @@
 package hospital.src;
 
-import enums.Commands;
-import service.AppointmentService;
-import service.DoctorService;
 import exception.InvalidCommandException;
-import service.PatientService;
-
+import hospital.src.enums.Commands;
+import hospital.src.service.AppointmentService;
+import hospital.src.service.DoctorService;
+import hospital.src.service.PatientService;
 import java.util.Scanner;
 
 public class FlipMed {

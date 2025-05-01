@@ -1,14 +1,13 @@
 package snakeandladder.src;
 
+import java.util.List;
+import java.util.Scanner;
 import snakeandladder.src.model.Cell;
 import snakeandladder.src.model.Player;
 import snakeandladder.src.repository.PlayerRepository;
 import snakeandladder.src.repository.SnlBoardRepository;
 import snakeandladder.src.service.GameplayService;
 import snakeandladder.src.visualization.SnlBoardVisualizer;
-
-import java.util.List;
-import java.util.Scanner;
 
 public class SnakeAndLadder {
   public static void main(String[] args) {
@@ -44,14 +43,19 @@ public class SnakeAndLadder {
 
     for (int i = 0; i < noOfPlayers; i++) {
       String playerName = scanner.next();
-      System.out.println("Player Registered : " + playerRepository.registerPlayer(playerName, snlBoardRepository.getFirstCell()));
+      System.out.println(
+          "Player Registered : "
+              + playerRepository.registerPlayer(playerName, snlBoardRepository.getFirstCell()));
     }
 
-
     List<Player> players = playerRepository.getPLAYERS();
-    players.forEach(player -> {
-      System.out.println(player.getName() + " Enter The Board at position " + player.getPosition().getCellNumber());
-    });
+    players.forEach(
+        player -> {
+          System.out.println(
+              player.getName()
+                  + " Enter The Board at position "
+                  + player.getPosition().getCellNumber());
+        });
     int numberOfDice = scanner.nextInt();
 
     // Create and show the visualization

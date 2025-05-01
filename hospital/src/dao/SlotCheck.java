@@ -1,12 +1,11 @@
-package dao;
+package hospital.src.dao;
 
-public class SlotCheck{
+public class SlotCheck {
   Slot slot;
   boolean isAvailable = false;
   boolean isBooked = true;
 
-  public SlotCheck() {
-  }
+  public SlotCheck() {}
 
   public SlotCheck(Slot slot, boolean isAvailable) {
     this.slot = slot;

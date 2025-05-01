@@ -1,4 +1,4 @@
-package enums;
+package hospital.src.enums;
 
 public enum Commands {
   REGISTER_DOC("registerDoc"),

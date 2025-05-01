@@ -27,9 +27,6 @@ public class CircularNode {
 
   @Override
   public String toString() {
-    return "CircularNode{" +
-            "player=" + player +
-            ", next=" + next +
-            '}';
+    return "CircularNode{" + "player=" + player + ", next=" + next + '}';
   }
 }
