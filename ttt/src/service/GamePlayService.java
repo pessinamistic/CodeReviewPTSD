@@ -19,6 +19,10 @@ public class GamePlayService {
     while (!isGameOver) {
       board.printBoard();
       Player player = currentPlayer.getPlayer();
+      if (scanner.hasNext("exit")) {
+        System.out.println("Game exited.");
+        return;
+      }
       int row = scanner.nextInt();
       int col = scanner.nextInt();
       if (board.isValidMove(row, col)) {
