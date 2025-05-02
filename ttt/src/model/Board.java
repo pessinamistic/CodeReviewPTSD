@@ -17,11 +17,10 @@ public class Board {
   }
 
   public boolean isValidMove(int row, int col) {
-    return gameBoard.get(row - 1).get(col - 1).equals("-")
-        && row > 0
+    return row > 0
         && row < 4
         && col > 0
-        && col < 4;
+        && col < 4 && gameBoard.get(row - 1).get(col - 1).equals("-");
   }
 
   public void makeMove(int row, int col, String symbol) {
