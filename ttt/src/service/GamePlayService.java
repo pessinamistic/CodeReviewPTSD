@@ -26,11 +26,11 @@ public class GamePlayService {
       int row = scanner.nextInt();
       int col = scanner.nextInt();
       if (board.isValidMove(row, col)) {
-        board.makeMove(row, col, player.getSymbol().name());
+        board.makeMove(row, col, player.symbol().name());
         isGameOver = this.checkGameOver(board, player, row, col);
         if (isGameOver) {
           board.printBoard();
-          String result = "Game Over! " + (board.isBoardFull() ? "" : player.getName() + " wins!");
+          String result = "Game Over! " + (board.isBoardFull() ? "" : player.name() + " wins!");
           System.out.println(result);
         } else {
           currentPlayer = currentPlayer.getNext();
@@ -42,7 +42,7 @@ public class GamePlayService {
   }
 
   private boolean checkGameOver(Board board, Player player, int row, int col) {
-    return board.isBoardFull() || board.checkWinner(row, col, player.getSymbol().name());
+    return board.isBoardFull() || board.checkWinner(row, col, player.symbol().name());
   }
 
   private Node initialiseGame(List<Player> players) {

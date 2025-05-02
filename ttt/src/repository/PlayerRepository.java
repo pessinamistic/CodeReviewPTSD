@@ -14,7 +14,7 @@ public class PlayerRepository {
 
   public Player getPlayer(String name) {
     for (Player player : PLAYERS) {
-      if (player.getName().equals(name)) {
+      if (player.name().equals(name)) {
         return player;
       }
     }
