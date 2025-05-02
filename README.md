@@ -1,8 +1,6 @@
 
 # Machine-Coding-Round
 
-Book 1:1 for Interviews and Mentorship: https://topmate.io/lavakumar_thatisetti
-
 ## All Low-Level Design and Machine Coding Rounds Questions and Answers
 
 ### Snake and Ladder
