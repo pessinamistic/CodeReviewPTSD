@@ -17,7 +17,11 @@ public class Board {
   }
 
   public boolean isValidMove(int row, int col) {
-    return gameBoard.get(row - 1).get(col - 1).equals("-") && row > 0 && row < 4 && col > 0 && col < 4;
+    return gameBoard.get(row - 1).get(col - 1).equals("-")
+        && row > 0
+        && row < 4
+        && col > 0
+        && col < 4;
   }
 
   public void makeMove(int row, int col, String symbol) {
@@ -63,6 +67,11 @@ public class Board {
   }
 
   public void resetBoard() {
-    gameBoard = List.of(List.of("-", "-", "-"), List.of("-", "-", "-"), List.of("-", "-", "-"));
+    gameBoard =
+        new ArrayList<>(
+            Arrays.asList(
+                new ArrayList<>(Arrays.asList("-", "-", "-")),
+                new ArrayList<>(Arrays.asList("-", "-", "-")),
+                new ArrayList<>(Arrays.asList("-", "-", "-"))));
   }
 }
