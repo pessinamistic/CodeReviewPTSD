@@ -55,14 +55,21 @@ public class Board {
         break;
       }
     }
-    boolean diagonalWin = true;
+    boolean diagonalWin1 = true;
     for (int i = 0; i < gameBoard.size(); i++) {
       if (!gameBoard.get(i).get(i).equals(symbol)) {
-        diagonalWin = false;
+        diagonalWin1 = false;
         break;
       }
     }
-    return rowWin || columnWin || diagonalWin;
+    boolean diagonalWin2 = true;
+    for (int i = 0; i < gameBoard.size(); i++) {
+      if (!gameBoard.get(i).get(gameBoard.size() - 1 - i).equals(symbol)) {
+        diagonalWin2 = false;
+        break;
+      }
+    }
+    return rowWin || columnWin || diagonalWin1 || diagonalWin2;
   }
 
   public void resetBoard() {

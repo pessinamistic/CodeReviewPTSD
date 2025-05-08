@@ -50,12 +50,11 @@ public class SnakeAndLadder {
 
     List<Player> players = playerRepository.getPLAYERS();
     players.forEach(
-        player -> {
-          System.out.println(
-              player.getName()
-                  + " Enter The Board at position "
-                  + player.getPosition().getCellNumber());
-        });
+        player ->
+            System.out.println(
+                player.getName()
+                    + " Enter The Board at position "
+                    + player.getPosition().getCellNumber()));
     int numberOfDice = scanner.nextInt();
 
     // Create and show the visualization
