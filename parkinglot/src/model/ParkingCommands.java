@@ -8,7 +8,7 @@ public enum ParkingCommands {
   UNPARK_VEHICLE("unpark_vehicle"),
   DISPLAY("display");
 
-  private String name;
+  private final String name;
 
   ParkingCommands(String name) {
     this.name = name;
@@ -29,7 +29,7 @@ enum Display {
   FREE_SLOTS("free_slots"),
   OCCUPIED_SLOTS("occupied_slots");
 
-  private String name;
+  private final String name;
 
   Display(String name) {
     this.name = name;
