@@ -3,6 +3,16 @@ package hitwicket.src.model;
 public class Node {
   Player player;
   Node node;
+  Node next;
+
+  public Node getNext() {
+    return next;
+  }
+
+  public Node setNext(Node next) {
+    this.next = next;
+    return this;
+  }
 
   public Player getPlayer() {
     return player;

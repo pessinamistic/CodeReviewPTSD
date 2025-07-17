@@ -1,6 +1,7 @@
 package inito.src;
 
-import service.MatrixGraph;
+
+import inito.src.service.MatrixGraph;
 
 import java.util.Scanner;
 

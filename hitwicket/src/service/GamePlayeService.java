@@ -1,9 +1,9 @@
 package hitwicket.src.service;
 
-import model.Board;
-import model.Game;
-import model.Request;
-import model.Status;
+import hitwicket.src.model.Board;
+import hitwicket.src.model.Game;
+import hitwicket.src.model.Request;
+import hitwicket.src.model.Status;
 import hitwicket.src.repository.GamePlayRepository;
 
 public class GamePlayeService {
@@ -31,6 +31,6 @@ public class GamePlayeService {
     board.checkWinner(row,
             col,
             game.getCurrentPlayer().getPlayer().getSymbol());
-    game.setCurrentPlayer(game.getCurrentPlayer().getNode().next());
+    game.setCurrentPlayer(game.getCurrentPlayer().getNode().getNext());
   }
 }

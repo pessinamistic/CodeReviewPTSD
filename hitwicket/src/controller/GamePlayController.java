@@ -1,8 +1,8 @@
 package hitwicket.src.controller;
 
-import model.Request;
-import model.Status;
-import service.GamePlayeService;
+import hitwicket.src.model.Request;
+import hitwicket.src.model.Status;
+import hitwicket.src.service.GamePlayeService;
 
 public class GamePlayController {
 

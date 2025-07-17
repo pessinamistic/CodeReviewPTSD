@@ -1,6 +1,7 @@
 package inito.src.service;
 
-import model.Pair;
+
+import inito.src.model.Pair;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

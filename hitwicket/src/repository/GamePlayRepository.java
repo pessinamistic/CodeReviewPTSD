@@ -1,7 +1,8 @@
 package hitwicket.src.repository;
 
-import model.Game;
-import model.Status;
+
+import hitwicket.src.model.Game;
+import hitwicket.src.model.Status;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -7,6 +7,6 @@ public class Card {
 
 
   public boolean matches(Card card){
-    return this.color == card.color || this.val == this.val;
+    return this.color == card.color;
   }
 }
